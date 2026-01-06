@@ -1,16 +1,38 @@
-# React + Vite
+﻿# Tercera Compañía – Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositorio contiene la landing page oficial de la Tercera Compañía de Bomberos, construida con React 19 + Vite + Tailwind CSS. El sitio presenta hero slider, quick links, grid de especialidades, alianza franco-chilena y la sección inmersiva de la cancha techada en una sola página moderna y responsiva.
 
-Currently, two official plugins are available:
+## Estructura clave
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `src/main.jsx`: punto de entrada de Vite que monta el componente `LandingPage`.
+- `src/components/Navbar.jsx`: navegación fija responsive con iconos de `lucide-react` y menú hamburguesa.
+- `src/components/LandingPage.jsx`: layout completo con hero, quick links, grid, alianza y sección de cancha.
+- `src/components/Footer.jsx`: pie de página institucional con créditos.
+- `src/assets/`: imágenes hero, cancha y logo.
 
-## React Compiler
+## Scripts
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install       # instala dependencias
+npm run dev       # levanta el servidor de desarrollo con hot reload
+npm run build     # compila el sitio para producción
+npm run preview   # sirve el build generado
+```
 
-## Expanding the ESLint configuration
+## Principios de diseño
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Tailwind CSS se aplica con utilidades por componente; los contenedores principales respetan `max-w-6xl`/`max-w-7xl` y bordes redondeados para mantener coherencia visual.
+- El hero combina un slider de imágenes, gradientes y CTAs en rojo institucional.
+- La barra fija cambia su fondo según el scroll o el menú móvil para mantener legibilidad.
+- La sección final de la cancha se diseñó como un poster vertical con overlay oscuro y CTA destacado.
+
+## Cómo colaborar
+
+1. Trabaja dentro de `src/components` y mantén los assets en `src/assets`.
+2. Usa exclusivamente clases utilitarias de Tailwind para mantener consistencia.
+3. Corre `npm run build` antes de abrir un PR para asegurar que compile.
+
+## Notas adicionales
+
+- El sitio es completamente estático; la interactividad vive en componentes React con estado local.
+- Para validaciones visuales, ejecuta `npm run dev` y prueba las vistas móviles en las devtools.
