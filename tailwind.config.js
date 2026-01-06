@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         'bombero-red': '#D61F26',
+        'bombero-blue': '#0E1B3A'
       }
     },
   },
