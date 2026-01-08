@@ -1,3 +1,5 @@
+import { Facebook, Instagram, Youtube } from 'lucide-react';
+
 const Footer = () => (
   <footer className="bg-[#050812] px-6 py-10 text-sm text-gray-300">
     <div className="mx-auto flex max-w-6xl flex-col gap-8 md:flex-row md:items-start md:justify-between">
@@ -8,15 +10,36 @@ const Footer = () => (
       </div>
       <div className="space-y-3">
         <p className="text-xs uppercase tracking-[0.4em] text-white/60">Redes Sociales</p>
-        <div className="flex flex-wrap gap-3 text-white">
-          <a href="https://www.facebook.com" className="transition hover:text-red-600">
-            Facebook
+        <div className="flex space-x-6">
+          <a
+            href="https://www.facebook.com"
+            aria-label="Facebook"
+            className="text-gray-400 transition-colors duration-300 hover:text-white"
+          >
+            <Facebook className="h-6 w-6" />
           </a>
-          <a href="https://www.instagram.com" className="transition hover:text-red-600">
-            Instagram
+          <a
+            href="https://www.instagram.com"
+            aria-label="Instagram"
+            className="text-gray-400 transition-colors duration-300 hover:text-white"
+          >
+            <Instagram className="h-6 w-6" />
           </a>
-          <a href="https://www.youtube.com" className="transition hover:text-red-600">
-            YouTube
+          <a
+            href="https://www.youtube.com"
+            aria-label="YouTube"
+            className="text-gray-400 transition-colors duration-300 hover:text-white"
+          >
+            <Youtube className="h-6 w-6" />
+          </a>
+          <a
+            href="https://x.com/tercerabomberos"
+            aria-label="X"
+            className="text-gray-400 transition-colors duration-300 hover:text-white"
+          >
+            <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+            </svg>
           </a>
         </div>
       </div>

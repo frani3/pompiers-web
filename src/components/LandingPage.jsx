@@ -11,7 +11,7 @@ const quickLinks = [
   { label: 'Noticias', icon: Newspaper, href: '#noticias' },
   { label: 'Intranet', icon: Lock, href: '#intranet' },
   { label: 'Contacto', icon: Mail, href: '#contacto' },
-  { label: 'Alianza Francia', icon: Globe, href: '#alianza' }
+  { label: 'Alianza Francia', icon: Globe, href: '/alianza' }
 ];
 
 const cards = [
@@ -55,7 +55,7 @@ const LandingPage = () => {
       <Navbar />
 
       <section
-        className="relative flex min-h-[80vh] max-h-[900px] w-full items-center justify-center overflow-hidden pb-32 md:pb-0"
+        className="relative flex min-h-[100vh] max-h-[900px] w-full items-center justify-center overflow-hidden pb-64 md:pb-64"
         aria-label="Hero"
       >
         <div className="absolute inset-0">
@@ -71,7 +71,7 @@ const LandingPage = () => {
           ))}
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#030712]/90 via-[#0B1120]/70 to-[#0B1120]/95" />
-        <div className="relative z-20 flex w-full flex-col items-center gap-4 px-6 pt-32 text-center text-white md:pt-48">
+        <div className="relative z-20 flex w-full flex-col items-center gap-4 px-6 pt-48 text-center text-white">
           <p className="text-[10px] uppercase tracking-[0.5em] text-white/60">Sauveteur et Gardien de la Propriété</p>
           <h1 className="max-w-3xl text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
             Más de 130 años de tradición franco-chilena
@@ -95,15 +95,15 @@ const LandingPage = () => {
             </a>
           </div>
         </div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 overflow-hidden">
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 overflow-hidden z-20">
           <svg className="h-24 w-full text-gray-50" viewBox="0 0 1440 120" preserveAspectRatio="none">
             <path d="M0,40 C360,160 720,-40 1440,40 L1440,120 L0,120 Z" fill="currentColor" />
           </svg>
         </div>
       </section>
 
-      <section className="relative z-10 -mt-10 md:-mt-24 flex justify-center w-full px-4 pb-8 sm:px-6">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-end gap-4 rounded-[30px] bg-white/90 p-6 shadow-[0_35px_120px_rgba(15,23,42,0.25)] backdrop-blur">
+      <section className="relative z-30 -mt-20 md:-mt-28 flex justify-center w-full px-4 pb-8 sm:px-6">
+        <div className="relative z-30 mx-auto flex max-w-6xl flex-wrap items-end gap-4 rounded-[30px] bg-white/90 p-6 shadow-[0_35px_120px_rgba(15,23,42,0.25)] backdrop-blur">
           {quickLinks.map((link) => {
             const Icon = link.icon;
             return (
