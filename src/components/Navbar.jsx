@@ -111,11 +111,17 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            {menuItems.map((item) => (
-              <a key={item.label} href={item.href} className={desktopLinkClasses}>
-                {item.label}
-              </a>
-            ))}
+            {menuItems.map((item) =>
+              item.label === 'Alianza' ? (
+                <Link key={item.label} to="/alianza" className={desktopLinkClasses}>
+                  {item.label}
+                </Link>
+              ) : (
+                <a key={item.label} href={item.href} className={desktopLinkClasses}>
+                  {item.label}
+                </a>
+              )
+            )}
           </div>
         </div>
 
@@ -184,16 +190,27 @@ const Navbar = () => {
                 ))}
               </div>
             </div>
-            {menuItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className={mobileTextClasses}
-                onClick={() => setIsOpen(false)}
-              >
-                {item.label}
-              </a>
-            ))}
+            {menuItems.map((item) =>
+              item.label === 'Alianza' ? (
+                <Link
+                  key={item.label}
+                  to="/alianza"
+                  className={mobileTextClasses}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className={mobileTextClasses}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </a>
+              )
+            )}
             <div className="mt-3 flex flex-col gap-3">
               <a
                 href="#intranet"
