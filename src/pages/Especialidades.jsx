@@ -1,6 +1,8 @@
 import { Activity, Ambulance, Flame, Shield } from 'lucide-react';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import a1 from '../assets/pompiers10.jpg';
+import a2 from '../assets/pompiers3.avif';
 
 const zigzagSections = [
   {
@@ -10,7 +12,7 @@ const zigzagSections = [
       'Respondemos más de 500 emergencias al año. La Comandancia analiza cada “Llamado” mientras la alarma de incendio moviliza a la tripulación. Ventilamos, forzamos entradas y mantenemos la línea directa con la comunidad para controlar estructuras y frentes forestales.',
     icon: Flame,
     imageAlt: 'Bomberos combatiendo un incendio',
-    image: 'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80',
+    image: a1,
     imageFirst: false
   },
   {
@@ -20,7 +22,7 @@ const zigzagSections = [
       'Extricación e inmovilización tras colisiones, choques o atropellos definen la respuesta inicial. Dominamos maniobras hidráulicas, estabilización y rescate en alturas. El Servicio de Socorro abre pasos en ascensores, pozos y estructuras colapsadas para llegar a víctimas aisladas.',
     icon: Activity,
     imageAlt: 'Equipo de rescate vehicular',
-    image: 'https://images.unsplash.com/photo-1476041800959-2f6bb412c8ce?auto=format&fit=crop&w=1200&q=80',
+    image: a1,
     imageFirst: true
   },
   {
@@ -30,7 +32,7 @@ const zigzagSections = [
       'Tras 30 años en Francia, el SDIS 24 trajo protocolos a Chile en el año 2000. El Comandante Frédéric Robert lideró la transferencia técnica y hoy mantenemos la alianza viva en rescate vertical y control de terrenos peligrosos.',
     icon: Shield,
     imageAlt: 'Equipo GRIMP en acción vertical',
-    image: 'https://images.unsplash.com/photo-1454165205744-3b78555e5572?auto=format&fit=crop&w=1200&q=80',
+    image: a1,
     imageFirst: false
   }
 ];
@@ -49,7 +51,7 @@ const Especialidades = () => (
     <header className="relative w-full min-h-[60vh] flex flex-col justify-center items-center text-center overflow-hidden bg-white">
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80"
+          src={a2}
           alt="Bomberos en acción"
           className="absolute inset-0 h-full w-full object-cover"
         />

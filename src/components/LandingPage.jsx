@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Lock, Newspaper, Mail, Globe, Shield, FireExtinguisher, Activity, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import pompiers1 from '../assets/pompiers.avif';
@@ -8,10 +9,10 @@ import pompiers3 from '../assets/pompiers3.avif';
 import cancha from '../assets/cancha.avif';
 
 const quickLinks = [
-  { label: 'Noticias', icon: Newspaper, href: '#noticias' },
+  { label: 'Noticias', icon: Newspaper, to: '/noticias' },
   { label: 'Intranet', icon: Lock, href: '#intranet' },
-  { label: 'Contacto', icon: Mail, href: '#contacto' },
-  { label: 'Alianza Francia', icon: Globe, href: '/alianza' }
+  { label: 'Contacto', icon: Mail, to: '/contacto' },
+  { label: 'Alianza Francia', icon: Globe, to: '/alianza' }
 ];
 
 const cards = [
@@ -81,18 +82,18 @@ const LandingPage = () => {
           <p className="max-w-1xl text-base text-white/80 sm:text-lg">
             Combinamos historia, disciplina y la técnica moderna del GRIMP y Rescate.</p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <a
-              href="#postula"
+            <Link
+              to="/postula"
               className="rounded-full bg-red-600 px-10 py-3 text-xs font-semibold uppercase tracking-[0.4em] transition hover:bg-red-500"
             >
               Postula
-            </a>
-            <a
-              href="#donar"
+            </Link>
+            <Link
+              to="/ayudanos"
               className="rounded-full border border-white/60 px-10 py-3 text-xs font-semibold uppercase tracking-[0.4em] text-white transition hover:border-red-500"
             >
               Donar / Apoyar
-            </a>
+            </Link>
           </div>
         </div>
         <div className="pointer-events-none absolute inset-x-0 bottom-0 overflow-hidden z-20">
@@ -106,12 +107,14 @@ const LandingPage = () => {
         <div className="relative z-30 mx-auto flex max-w-6xl flex-wrap items-end gap-4 rounded-[30px] bg-white/90 p-6 shadow-[0_35px_120px_rgba(15,23,42,0.25)] backdrop-blur">
           {quickLinks.map((link) => {
             const Icon = link.icon;
-            return (
-              <a
-                key={link.label}
-                href={link.href}
-                className="flex w-full items-center gap-3 rounded-2xl border border-slate-200 bg-white px-6 py-4 text-sm font-semibold uppercase tracking-[0.25em] text-slate-900 transition hover:border-red-500 hover:shadow-[0_20px_60px_rgba(15,23,42,0.15)] sm:w-auto"
-              >
+            const baseClass = 'flex w-full items-center gap-3 rounded-2xl border border-slate-200 bg-white px-6 py-4 text-sm font-semibold uppercase tracking-[0.25em] text-slate-900 transition hover:border-red-500 hover:shadow-[0_20px_60px_rgba(15,23,42,0.15)] sm:w-auto';
+            return link.to ? (
+              <Link key={link.label} to={link.to} className={baseClass}>
+                <Icon className="h-5 w-5 text-red-600" />
+                <span>{link.label}</span>
+              </Link>
+            ) : (
+              <a key={link.label} href={link.href} className={baseClass}>
                 <Icon className="h-5 w-5 text-red-600" />
                 <span>{link.label}</span>
               </a>
@@ -143,9 +146,12 @@ const LandingPage = () => {
                   <h3 className="text-xl font-semibold text-slate-900">{card.title}</h3>
                 </div>
                 <p className="flex-1 text-sm leading-relaxed text-slate-600">{card.body}</p>
-                <button className="inline-flex w-fit items-center justify-center rounded-full border border-red-500 px-5 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-red-600 transition hover:bg-red-50">
+                <Link
+                  to="/especialidades"
+                  className="inline-flex w-fit items-center justify-center rounded-full border border-red-500 px-5 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-red-600 transition hover:bg-red-50"
+                >
                   Ver más
-                </button>
+                </Link>
               </article>
             );
           })}
@@ -183,13 +189,13 @@ const LandingPage = () => {
                 Pasto sintético profesional, iluminación LED y seguridad. Disponible para arriendo 6x6. Apoya a tu
                 Tercera Compañía.
               </p>
-              <a
-                href="#cancha"
+              <Link
+                to="/cancha"
                 className="inline-flex items-center justify-center gap-3 rounded-full bg-red-600 px-8 py-4 text-sm font-bold uppercase tracking-[0.3em] text-white transition hover:bg-red-700"
               >
                 <Phone className="h-5 w-5" />
                 Reservar horario al 41-2229112
-              </a>
+              </Link>
             </div>
           </div>
         </div>

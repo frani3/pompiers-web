@@ -13,12 +13,12 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
 const menuItems = [
-  { label: 'Alianza', href: '#alianza' },
-  { label: 'Noticias', href: '#noticias' },
-  { label: 'Postula', href: '#postula' },
-  { label: 'Ayúdanos', href: '#ayudanos' },
-  { label: 'Cancha', href: '#cancha' },
-  { label: 'Contacto', href: '#contacto' }
+  { label: 'Alianza', to: '/alianza' },
+  { label: 'Noticias', to: '/noticias' },
+  { label: 'Postula', to: '/postula' },
+  { label: 'Ayúdanos', to: '/ayudanos' },
+  { label: 'Cancha', to: '/cancha' },
+  { label: 'Contacto', to: '/contacto' }
 ];
 
 const flyoutItems = [
@@ -112,8 +112,8 @@ const Navbar = () => {
               </div>
             </div>
             {menuItems.map((item) =>
-              item.label === 'Alianza' ? (
-                <Link key={item.label} to="/alianza" className={desktopLinkClasses}>
+              item.to ? (
+                <Link key={item.label} to={item.to} className={desktopLinkClasses}>
                   {item.label}
                 </Link>
               ) : (
@@ -191,10 +191,10 @@ const Navbar = () => {
               </div>
             </div>
             {menuItems.map((item) =>
-              item.label === 'Alianza' ? (
+              item.to ? (
                 <Link
                   key={item.label}
-                  to="/alianza"
+                  to={item.to}
                   className={mobileTextClasses}
                   onClick={() => setIsOpen(false)}
                 >

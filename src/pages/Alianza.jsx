@@ -4,6 +4,8 @@ import sdis24 from '../assets/sdis24.png';
 import grimp from '../assets/grimp.jpg';
 import embajada from '../assets/embajada.png';
 import SPF from '../assets/Sapeurs_Pompiers_de_France.png';
+import pompiers4 from '../assets/pompiers4.avif';
+import a1 from '../assets/pompiers10.jpg';
 
 const Alianza = () => (
   <div className="bg-white text-[#0B1120]">
@@ -12,7 +14,7 @@ const Alianza = () => (
     <header className="relative min-h-[60vh] overflow-hidden bg-white">
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80"
+          src={pompiers4}
           alt="Banderas chilena y francesa"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -46,7 +48,7 @@ const Alianza = () => (
           </div>
           <div className="rounded-[32px] border border-slate-100 bg-white p-4 shadow-[0_25px_65px_rgba(15,23,42,0.12)]">
             <img
-              src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=900&q=80"
+              src={a1}
               alt="Firma del acuerdo"
               className="h-80 w-full rounded-[28px] object-cover"
             />
@@ -56,7 +58,7 @@ const Alianza = () => (
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <div className="order-2 rounded-[32px] border border-slate-100 bg-white p-4 shadow-[0_25px_65px_rgba(15,23,42,0.12)] lg:order-1">
             <img
-              src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80"
+              src={a1}
               alt="Brigada de rescate"
               className="h-80 w-full rounded-[28px] object-cover"
             />

@@ -1,5 +1,6 @@
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import a1 from '../assets/pompiers10.jpg';
 
 const honorariosDirectorio = ['Carlos Melo', 'Alejandro Pinto', 'Pablo Sánchez'];
 const honorariosCuerpo = ['Eduardo Brito', 'Reinaldo González', 'Mateos Ríos'];
@@ -13,7 +14,7 @@ const Organizacion = () => (
     <header className="relative min-h-[60vh] overflow-hidden bg-white">
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=1400&q=80"
+          src={a1}
           alt="Formación de bomberos"
           className="absolute inset-0 h-full w-full object-cover"
         />
