@@ -13,28 +13,28 @@ const Footer = () => (
         <p className="text-xs uppercase tracking-[0.4em] text-white/60">Redes Sociales</p>
         <div className="flex space-x-6">
           <a
-            href="https://www.facebook.com"
+            href="https://https://www.facebook.com/pompefranceconce/.facebook.com"
             aria-label="Facebook"
             className="text-gray-400 transition-colors duration-300 hover:text-white"
           >
             <Facebook className="h-6 w-6" />
           </a>
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/pompefranceconcepcion/"
             aria-label="Instagram"
             className="text-gray-400 transition-colors duration-300 hover:text-white"
           >
             <Instagram className="h-6 w-6" />
           </a>
           <a
-            href="https://www.youtube.com"
+            href="https://www.youtube.com/watch?v=khBIJWeljn8"
             aria-label="YouTube"
             className="text-gray-400 transition-colors duration-300 hover:text-white"
           >
             <Youtube className="h-6 w-6" />
           </a>
           <a
-            href="https://x.com/tercerabomberos"
+            href="https://x.com/PompeFrance3"
             aria-label="X"
             className="text-gray-400 transition-colors duration-300 hover:text-white"
           >
